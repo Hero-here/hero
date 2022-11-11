@@ -29,12 +29,12 @@ jobs:
        - name: cloning repo
          continue-on-error: true
          run: |
-           git clone -b main https://Nimbus01:${{ secrets.GH_TOKEN }}@github.com/Nimbus01/anim.git 
+           git clone -b main https://Hero-here:${{ secrets.GH_TOKEN }}@github.com/Hero-here/gdrive.git 
        - name: Running anim
          timeout-minutes: 340
          continue-on-error: true
          run: |
-           cd anim
+           cd gdrive
            docker build -t compressor . && docker run compressor
            
        - name: Loop workflow
